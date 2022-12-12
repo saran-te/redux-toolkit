@@ -4,6 +4,7 @@ import {
   multiplyTwo,
   multiplyThree,
   multiplyByAmount,
+  resetValue
 } from "../redux/multiplier/multiplierSlice";
 
 export function Multiplier() {
@@ -19,7 +20,7 @@ export function Multiplier() {
         >
           Multiply 2
         </button>
-      
+
         <button
           aria-label="Decrement value"
           onClick={() => dispatch(multiplyThree())}
@@ -34,8 +35,21 @@ export function Multiplier() {
           Multiply Any
         </button>
 
+        <button
+          aria-label="Decrement value"
+          onClick={() => dispatch(resetValue())}
+        >
+          Reset
+        </button>
 
-          <span>{count}</span>
+        {/* <button
+          aria-label="Decrement value"
+          onClick={() => dispatch(increment(5))}
+        >
+          Increment Any
+        </button> */}
+
+        <span>{count}</span>
       </div>
     </div>
   );
